@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <script src="index.js" type="text/javascript"></script>
+    <meta charset="utf-8">
+    <title>Simple exampletitle</title>
+</head>
+
+<body>       
+    <div class="container">  
+        <form id="direction" action="" method="post">
+          <h3>Test task</h3>
+          <fieldset>
+            <p>Select side:</p>
+                <div class="radio-options">
+                    <label><input type="radio" id="northernmost" name="direction" value="northernmost">northernmost</label>
+                    <label><input type="radio" id="easternmost" name="direction" value="easternmost">easternmost</label>
+                    <label><input type="radio" id="southernmost" name="direction" value="southernmost">southernmost</label>
+                    <label><input type="radio" id="westernmost" name="direction" value="westernmost">westernmost</label>
+                </div>
+                <div>
+                    <button id="getExtremeCity" type="button">Return the name</button>
+                </div>
+                <input id="resultGetExtremeCity" placeholder=" " type="text" autofocus readonly>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Enter latitude" id = "latitude"  type="number" required="required"/>
+            <input placeholder="Enter longitude" id = "longitude" type="number" required="required"/>
+            <button id="getClosestCity" type="button">Return the name of the nearest city</button> 
+            <input placeholder="Closest City" id = "resultClosestCity" type="text" readonly required="required"/>    
+          </fieldset>
+          <fieldset>
+            <button  type="button" id="getListState" >Get a list of abbreviations</button>
+            <input id = "resultListState" type="text" readonly >
+          </fieldset>
+        </form>
+      </div>
+   
+</body>
+</html>
