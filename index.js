@@ -4,47 +4,47 @@ class Map {
     }
   
     getExtremeCity(SelectedDirection) {
-      switch (SelectedDirection) {
-        case 'northernmost':
-          let max_norther = this.list[0].latitude;
+        switch (SelectedDirection) {
+          case 'northernmost':
+          let max_norther = this.list[0];
           for (let i = 0; i < this.list.length; i++) {
-            if (this.list[i].latitude > max_norther) {
-              max_norther = this.list[i].city;
-            }
+              if (this.list[i].latitude > max_norther.latitude) {
+                  max_norther = this.list[i];
+              }
           }
-          document.getElementById("resultGetExtremeCity").value = max_norther;
-          break;
-        case 'easternmost':
-          let max_easter = this.list[0].longitude;
-          for (let i = 0; i < this.list.length; i++) {
-            if (this.list[i].longitude > max_easter) {
-              max_easter = this.list[i].city;
-            }
-          }    
-          document.getElementById("resultGetExtremeCity").value = max_easter;
-          break;
-        case 'southernmost':
-          let min_souther = this.list[0].latitude;
-          for (let i = 0; i < this.list.length; i++) {
-            if (this.list[i].latitude < min_souther) {
-              min_souther = this.list[i].city;
-            }
-          }    
-          document.getElementById("resultGetExtremeCity").value = min_souther;
-          break;
-        case 'westernmost':
-          let min_wester = this.list[0].longitude;
-          for (let i = 0; i < this.list.length; i++) {
-            if (this.list[i].longitude < min_wester) {
-              min_wester = this.list[i].city;
-            }
-          }    
-          document.getElementById("resultGetExtremeCity").value = min_wester;
-          break;
-        default:
-          alert( 'error' );     
+            document.getElementById("resultGetExtremeCity").value = max_norther.city;
+            break;
+          case 'easternmost':
+            let max_easter = this.list[0];
+            for (let i = 0; i < this.list.length; i++) {
+              if (this.list[i].longitude > max_easter.longitude) {
+                max_easter = this.list[i];
+              }
+            }    
+            document.getElementById("resultGetExtremeCity").value = max_easter.city;
+            break;
+          case 'southernmost':
+            let min_souther = this.list[0];
+            for (let i = 0; i < this.list.length; i++) {
+              if (this.list[i].latitude < min_souther.latitude) {
+                min_souther = this.list[i];
+              }
+            }    
+            document.getElementById("resultGetExtremeCity").value = min_souther.city;
+            break;
+          case 'westernmost':
+            let min_wester = this.list[0];
+            for (let i = 0; i < this.list.length; i++) {
+              if (this.list[i].longitude < min_wester.longitude) {
+                min_wester = this.list[i];
+              }
+            }    
+            document.getElementById("resultGetExtremeCity").value = min_wester.city;
+            break;
+          default:
+            alert( 'error' );     
+        }
       }
-    }
   
     closestCity(latitude, longitude) {
         if(latitude && longitude){
