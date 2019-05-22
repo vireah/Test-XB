@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function(event) {
 class Map {
     constructor(list) {
       this.list = list;
@@ -124,4 +123,3 @@ class Map {
   document.getElementById("getListState").addEventListener("click", function(){
   map.listState();
   });
-});
